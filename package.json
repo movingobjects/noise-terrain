@@ -1,17 +1,17 @@
 {
-  "name": "noise-field",
-  "productName": "Noise-field",
+  "name": "noise-terrain",
+  "productName": "Noise Terrain",
   "version": "0.1.0",
   "description": "Three.js gradient-noise terrain visualization",
   "author": "Scott Thiessen (http://movingobjects.io)",
   "license": "ISC",
-  "homepage": "https://github.com/movingobjects/noise-field#readme",
+  "homepage": "https://github.com/movingobjects/noise-terrain#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/movingobjects/noise-field.git"
+    "url": "git+https://github.com/movingobjects/noise-terrain.git"
   },
   "bugs": {
-    "url": "https://github.com/movingobjects/noise-field/issues"
+    "url": "https://github.com/movingobjects/noise-terrain/issues"
   },
   "engines": {
     "node": ">=8",
