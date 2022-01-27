@@ -49,7 +49,7 @@
     "dat.gui": "^0.7.1",
     "lodash": "^4.17.5",
     "simplex-noise": "^2.4.0",
-    "three": "^0.86.0",
+    "three": "^0.137.0",
     "varyd-utils": "^1.1.1"
   }
 }
