@@ -18,7 +18,7 @@ import shaderVert from './shaders/vert.glsl';
 const GUI_DEFAULTS = {
   pixelRatio: 2.0,
   linesOn: false,
-  fogColor: "#163646",
+  fogColor: "#0d2154",
   fogNear: 5,
   fogFar: 15,
   particleSize: 0.6,
