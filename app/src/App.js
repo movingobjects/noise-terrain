@@ -17,14 +17,14 @@ import shaderVert from './shaders/vert.glsl';
 
 const GUI_DEFAULTS = {
   pixelRatio: 2.0,
-  linesOn: true,
+  linesOn: false,
   fogColor: "#163646",
   fogNear: 5,
   fogFar: 15,
-  particleSize: 1,
-  particleSpacing: 0.5,
-  particleAreaW: 25,
-  particleAreaH: 5,
+  particleSize: 0.6,
+  particleSpacing: 0.15,
+  particleAreaW: 30,
+  particleAreaH: 40,
   camFov: 60,
   camNear: 0.1,
   camFar: 100,
@@ -33,17 +33,17 @@ const GUI_DEFAULTS = {
   camZ: 3,
   noiseAScale: 0.45,
   noiseASpeed: 0.45,
-  noiseALevel: 0.75,
-  noiseBScale: 0.2,
+  noiseALevel: 0.35,
+  noiseBScale: 0.25,
   noiseBSpeed: 0.25,
-  noiseBLevel: 1.5,
-  colorA: "#66ddff",
-  colorB: "#66ffbb",
-  noiseColorScale: 0.2,
-  noiseColorSpeed: 0.25,
-  bgColorTop: "#0b3039",
-  bgColorBtm: "#0b2534",
-  bgRotation: 0.875
+  noiseBLevel: 0.75,
+  colorA: "#2cffa6",
+  colorB: "#f437bf",
+  noiseColorScale: 0.45,
+  noiseColorSpeed: 0.35,
+  bgColorTop: "#0d2154",
+  bgColorBtm: "#1d0e3d",
+  bgRotation: 0.45
 }
 
 
@@ -72,7 +72,7 @@ export default class App {
     this.timeStart   = Date.now();
     this.timeElapsed = 0;
 
-    this.lines       = [];
+    this.lines       = null;
     this.pts         = null;
 
     this.simplexA     = new SimplexNoise();
@@ -493,7 +493,7 @@ export default class App {
       this.lines.geometry.verticesNeedUpdate = true;
       if(!this.lines.geometry.colors[lineIndex*2]) {
         this.lines.geometry.colors[lineIndex*2] = new THREE.Color(colorR, colorG, colorB);
-        this.lines.geometry.colors[lineIndex*2+1] = new THREE.Color(colorR, colorG, colorB); 
+        this.lines.geometry.colors[lineIndex*2+1] = new THREE.Color(colorR, colorG, colorB);
       } else {
         this.lines.geometry.colors[lineIndex*2].r = colorR;
         this.lines.geometry.colors[lineIndex*2].g = colorG;
