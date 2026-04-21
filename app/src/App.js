@@ -160,7 +160,7 @@ export default class App {
           this.pts.material.uniforms.uParticleSize.value = val;
         })
 
-    let fieldSpacing = folderParticles.add(this, 'particleSpacing', 0.15, 0.75);
+    let fieldSpacing = folderParticles.add(this, 'particleSpacing', 0.1, 0.75);
         fieldSpacing.onChange(this.handleViewChange);
 
     let fieldAreaW = folderParticles.add(this, 'particleAreaW', 1, 50);
