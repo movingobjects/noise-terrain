@@ -2,7 +2,7 @@
 // Imports
 
 import * as _ from 'lodash';
-import { random, maths, colors } from 'varyd-utils';
+import { random, maths, colors } from '@movingobjects/utils';
 
 import dat from 'dat.gui';
 import * as THREE from 'three';
@@ -301,8 +301,8 @@ export default class App {
         colorRatios = _.times(count, (i) => 0.5);
 
     let geom = new THREE.BufferGeometry();
-        geom.addAttribute(  'position', new THREE.BufferAttribute(new Float32Array(verts), 3));
-        geom.addAttribute('colorRatio', new THREE.BufferAttribute(new Float32Array(colorRatios), 1));
+        geom.setAttribute(  'position', new THREE.BufferAttribute(new Float32Array(verts), 3));
+        geom.setAttribute('colorRatio', new THREE.BufferAttribute(new Float32Array(colorRatios), 1));
         geom.computeBoundingSphere();
 
     let mat = new THREE.ShaderMaterial({
